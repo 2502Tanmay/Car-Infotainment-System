@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMW Car Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+</head>
+<body>
+    <div class="dashboard-container">
+        <nav class="top-nav">
+            <div class="nav-links">
+                <a href="dashboard.html" class="nav-link active">Dashboard</a>
+                <a href="navigation.html" class="nav-link">Navigation</a>
+                <a href="media.html" class="nav-link">Media</a>
+                <a href="history.html" class="nav-link">History</a>
+                <a href="#" class="nav-link" onclick="logout(); return false;">Log Out</a>
+            </div>
+            <div class="car-id">
+                CAR ID<br>
+                <span>BR 06 GX 5643</span>
+            </div>
+        </nav>
+
+        <main class="dashboard-content">
+            <div class="left-panel">
+                <div class="info-card temperature-card">
+                    <h2>Temperature</h2>
+                    <p class="temp-value">27 °C</p>
+                </div>
+                <div class="info-card seatbelt-card">
+                    <p class="seatbelt-status unbuckled">Unbuckled</p>
+                </div>
+            </div>
+
+            <div class="right-panel">
+                <div class="car-visualization">
+                    <div class="car-top-view">
+                        <img src="image.png" alt="Car" class="car-image">
+
+                         <!-- Sensors -->
+                        <div class="sensor fl"><span class="sensor-value">31</span></div>
+                        <div class="sensor fr"><span class="sensor-value">32</span></div>
+                        <div class="sensor rl"><span class="sensor-value">23</span></div>
+                        <div class="sensor rr"><span class="sensor-value">50</span></div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="auth-check.js"></script>
+    <script src="dashboard.js"></script>
+</body>
+</html>

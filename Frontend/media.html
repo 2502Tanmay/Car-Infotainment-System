@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media - BMW Car Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <nav class="top-nav">
+            <div class="nav-links">
+                <a href="dashboard.html" class="nav-link">Dashboard</a>
+                <a href="navigation.html" class="nav-link">Navigation</a>
+                <a href="media.html" class="nav-link active">Media</a>
+                <a href="history.html" class="nav-link">History</a>
+                <a href="#" class="nav-link" onclick="logout(); return false;">Log Out</a>
+            </div>
+            <div class="car-id">
+                CAR ID<br>
+                <span>BR 06 GX 5643</span>
+            </div>
+        </nav>
+
+        <main class="media-content">
+            <h1 class="media-title">CAR MEDIA</h1>
+            <div class="video-container">
+                <video controls>
+                    <source src="C:\Users\tanma\Desktop\Internship\Task_04\video.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </main>
+    </div>
+
+    <script src="auth-check.js"></script>
+    <script src="media.js"></script>
+</body>
+</html>

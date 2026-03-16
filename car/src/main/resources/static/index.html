@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Smart Car Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>🚗 Smart Car Monitoring System</h1>
+
+<div class="container">
+
+    <h2>Add Car Data</h2>
+    <form id="carForm">
+        <input type="number" id="speed" placeholder="Speed" required>
+        <input type="number" id="fuel" placeholder="Fuel Level" required>
+
+        <label>
+            <input type="checkbox" id="seatbelt">
+            Seat Belt On
+        </label>
+
+        <button type="submit">Save Data</button>
+    </form>
+
+    <hr>
+
+    <h2>Latest Car Data</h2>
+    <button onclick="getLatest()">Get Latest</button>
+    <div id="latestData"></div>
+
+    <hr>
+
+    <h2>All Car Records</h2>
+    <button onclick="getAll()">Load All</button>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Speed</th>
+                <th>Fuel</th>
+                <th>Seat Belt</th>
+                <th>Time</th>
+            </tr>
+        </thead>
+        <tbody id="carTable"></tbody>
+    </table>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

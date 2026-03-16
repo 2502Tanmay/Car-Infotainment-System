@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Data History</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Add jsPDF library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.31/jspdf.plugin.autotable.min.js"></script>
+    <script>
+        // Ensure jsPDF is available globally
+        if (typeof window.jsPDF === 'undefined' && typeof window.jspdf !== 'undefined') {
+            window.jsPDF = window.jspdf.jsPDF;
+        }
+    </script>
+</head>
+<body>
+    <div class="dashboard-container">
+        <nav class="top-nav">
+            <div class="nav-links">
+                <a href="dashboard.html" class="nav-link">Dashboard</a>
+                <a href="navigation.html" class="nav-link">Navigation</a>
+                <a href="media.html" class="nav-link">Media</a>
+                <a href="history.html" class="nav-link active">History</a>
+                <a href="#" class="nav-link" onclick="logout(); return false;">Log Out</a>
+            </div>
+            <div class="car-id">
+                CAR ID<br>
+                <span>BR 06 GX 5643</span>
+            </div>
+        </nav>
+
+        <main class="history-content">
+            <h1 class="history-title">Car Data History</h1>
+            
+            <div class="table-container">
+                <table class="history-table">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>FL (PSI)</th>
+                            <th>FR (PSI)</th>
+                            <th>RL (PSI)</th>
+                            <th>RR (PSI)</th>
+                            <th>Temp (°C)</th>
+                            <th>Seatbelt</th>
+                            <th>Timestamp</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Data will be populated by JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+
+            <button class="download-button" onclick="downloadPDF()">Download PDF</button>
+        </main>
+    </div>
+
+    <script src="auth-check.js"></script>
+    <script src="history.js"></script>
+</body>
+</html>

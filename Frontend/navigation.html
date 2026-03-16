@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation - BMW Car Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+</head>
+<body>
+    <div class="dashboard-container">
+        <nav class="top-nav">
+            <div class="nav-links">
+                <a href="dashboard.html" class="nav-link">Dashboard</a>
+                <a href="navigation.html" class="nav-link active">Navigation</a>
+                <a href="media.html" class="nav-link">Media</a>
+                <a href="history.html" class="nav-link">History</a>
+                <a href="#" class="nav-link" onclick="logout(); return false;">Log Out</a>
+            </div>
+            <div class="car-id">
+                CAR ID<br>
+                <span>BR 06 GX 5643</span>
+            </div>
+        </nav>
+
+        <main class="navigation-content">
+            <div id="map"></div>
+        </main>
+    </div>
+
+    <script src="auth-check.js"></script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="navigation.js"></script>
+</body>
+</html>
